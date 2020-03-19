@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalculadoraJS</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script>
+        var bleep = new Audio()
+        bleep.src = "btnpress.mp3"
+        var bleep2 = new Audio()
+        bleep2.src = "ok.mp3"
+    </script>
+</head>
+<body>
+    <section>
+    <input type="text" id="visor" class="visor" readonly="true" disabled>
+    <input type="text" id="visor2" class="visor2" readonly="true" disabled>
+    <br>
+    <input type="submit" class="botao" value="7" onclick="preencher(7)" onmousedown="bleep.play()">
+    <input type="submit" class="botao" value="8" onclick="preencher(8)" onmousedown="bleep.play()">
+    <input type="submit" class="botao" value="9" onclick="preencher(9)" onmousedown="bleep.play()">
+    <input type="submit" class="botao" id="op" value="/" onclick="preencher('/')" onmousedown="bleep.play()">
+    <br>
+    <input type="submit" class="botao" value="4" onclick="preencher(4)" onmousedown="bleep.play()">
+    <input type="submit" class="botao" value="5" onclick="preencher(5)" onmousedown="bleep.play()">
+    <input type="submit" class="botao" value="6" onclick="preencher(6)" onmousedown="bleep.play()">
+    <input type="submit" class="botao" id="op" value="*" onclick="preencher('*')" onmousedown="bleep.play()">
+    <br>
+    <input type="submit" class="botao" value="1" onclick="preencher(1)" onmousedown="bleep.play()">
+    <input type="submit" class="botao" value="2" onclick="preencher(2)" onmousedown="bleep.play()">
+    <input type="submit" class="botao" value="3" onclick="preencher(3)" onmousedown="bleep.play()">
+    <input type="submit" class="botao" id="op" value="+" onclick="preencher('+')" onmousedown="bleep.play()">
+    <br>
+    <input type="submit" class="botao" value="0" onclick="preencher(0)" onmousedown="bleep.play()">
+    <input type="submit" class="botao" id="op" value="=" onclick="calcular()" onmousedown="bleep2.play()">
+    <input type="submit" class="botao" id="op" value="C" onclick="limpar()" onmousedown="bleep.play()">
+    <input type="submit" class="botao" id="op" value="-" onclick="preencher('-')" onmousedown="bleep.play()">
+    </section>
+    <script type="text/javascript" src="calculadora.js"></script>
+    <br><br><br>
+    <footer>
+        <p>&copy; Christian Martins - 2020</p>
+    </footer>
+</body>
+</html>
